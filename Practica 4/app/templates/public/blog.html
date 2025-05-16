@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('index') }}" class="menu-item">Inicio</a>
+    <a href="{{ url_for('sobre') }}" class="menu-item">Sobre mí</a>
+    <a href="{{ url_for('portafolio') }}" class="menu-item">Portafolio</a>
+    <a href="{{ url_for('blog') }}" class="menu-item">Blog</a>
+    <a href="{{ url_for('contacto') }}" class="menu-item">Contacto</a>
+    </nav>
+    
+    <button class="theme-button" onclick="toggleDarkMode()">Modo Oscuro</button>
+
+    <div class="container">
+        <h1>Blog y Reflexiones</h1>
+
+        <div class="article">
+            <h2>Mi experiencia con la programación</h2>
+            <p>
+                La programación es un mundo increíblemente vasto. Al principio, todo parece muy complejo, 
+                pero con el tiempo, cada error y cada línea de código te enseñan algo nuevo.
+            </p>
+            <p>
+                Una de mis experiencias más interesantes fue cuando intenté hacer mi primer juego en Java. 
+                Fue un reto, pero aprendí mucho sobre lógica y estructuras de datos.
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>Reflexión sobre el aprendizaje autodidacta</h2>
+            <p>
+                Aprender por tu cuenta es difícil, pero también es una de las mejores formas de crecimiento.
+                En la programación, el autoaprendizaje es clave. Google, Stack Overflow y la documentación 
+                oficial son tus mejores amigos.
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>Cómo manejar el estrés en la universidad</h2>
+            <p>
+                Entre tareas, exámenes y proyectos, el estrés puede ser abrumador. Una técnica que me ha servido 
+                es dividir grandes tareas en partes más pequeñas y enfocarme en una cosa a la vez.
+            </p>
+        </div>
+
+        <div class="comment-section">
+            <h2>Comentarios</h2>
+            <textarea class="comment-box" placeholder="Escribe tu comentario aquí..."></textarea>
+            <button class="comment-btn">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>

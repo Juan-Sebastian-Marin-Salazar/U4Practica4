@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav>
+    <a href="{{ url_for('index') }}" class="menu-item">Inicio</a>
+    <a href="{{ url_for('sobre') }}" class="menu-item">Sobre mí</a>
+    <a href="{{ url_for('portafolio') }}" class="menu-item">Portafolio</a>
+    <a href="{{ url_for('blog') }}" class="menu-item">Blog</a>
+    <a href="{{ url_for('contacto') }}" class="menu-item">Contacto</a>
+    </nav>
+
+    <button class="theme-button" onclick="toggleTheme()">Cambiar Tema</button>
+
+    <div class="seccion">
+        <h1>Mi Blog Personal</h1>
+        <p>Hola, mi nombre es Juan Sebastian y este es mi espacio en la web •3•</p>
+
+        <h2>Sobre mí</h2>
+        <p>Mi nombre es <strong>Marin Salazar Juan Sebastian</strong> y estudio programación web.</p>
+        <p>Estudio en <strong><i>Instituto Tecnológico de Mexicali</i></strong>, voy en 6to semestre (aunque lleve una materia de 7mo).</p>
+        <p>Intento no matarme y no llorar tanto :c</p>
+        <p>Me gusta la <i>tecnología</i>, <i>los videojuegos</i>, <i>la música</i> y el <u>diseño web</u>.</p> 
+    </div>
+
+    <div class="seccion">
+        <h2>Mi Información</h2>
+        <p><span>Edad:</span> 20 años</p>
+        <p><span>Ciudad:</span> Mexicali</p>
+        <p><span>Estudio en:</span> Instituto Tecnológico de Mexicali</p>
+        <p><span>Carrera:</span> Ingeniería en Sistemas Computacionales</p>
+        <p><span>Semestre:</span> 6to</p>
+    </div>  
+
+    <div class="seccion">
+    <h2>Mi Foto</h2>
+    <img src="{{ url_for('static', filename='img/Diseño sin título (4).png') }}" 
+    alt="Foto xd" width="200px">   
+    </div>
+
+    <div class="seccion">
+    <h2>Mis Pasatiempos</h2>
+    <ul>
+        <li>Jugar videojuegos</li>
+        <li>Programar</li>
+        <li>Escuchar musica</li>
+        <li>Ver anime</li>
+        <li>Leer</li>
+        <li>Dibujar</li>
+        <li>Cocinar</li>
+    </ul>
+    </div>
+    <div style="padding: 20px;">
+    <h2>Lenguajes que aprendi o estoy aprendiendo</h2>
+    <ol>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+    </ol>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+
+</html>

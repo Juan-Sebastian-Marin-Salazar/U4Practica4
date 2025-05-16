@@ -1,0 +1,250 @@
+:root {
+  --color-primary: #ff891b;
+  --color-primary-dark: #ff6600;
+  --color-bg-light: #f4f4f4;
+  --color-bg-dark: #222;
+  --color-text-light: #333;
+  --color-text-dark: white;
+  --color-menu-bg: #f5ae5e;
+  --color-menu-item-bg: white;
+  --color-menu-item-border: #ccc;
+  --color-menu-item-hover-bg: #ddd;
+  --color-menu-item-hover-border: #999;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+.seccion {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.nota {
+    color: blue;
+}
+
+.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery div {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.dark-mode .gallery div {
+background-color: #333;
+color: #f4f4f4;
+}
+
+.dark-mode h4 {
+  color: #f4f4f4;
+}
+
+.dark-mode p {
+  color: #ddd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.article {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section {
+ margin-top: 30px;
+}
+
+.comment-box {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.comment-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dark-mode textarea {
+  background: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--color-menu-bg);
+  padding: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;  
+}
+
+.dark-mode input, .dark-mode textarea {
+  background: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.menu-item {
+  background-color: var(--color-menu-item-bg);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: bold;
+  border: 2px solid var(--color-menu-item-border);
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item:focus {
+  background-color: var(--color-menu-item-hover-bg);
+  border-color: var(--color-menu-item-hover-border);
+  outline: none;
+}
+
+.menu-item:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid var(--color-menu-item-border);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+ul, ol {
+  padding-left: 20px;
+  list-style-position: inside;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--color-menu-bg);
+  margin-top: 20px;
+}
+
+footer a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--color-primary-dark);
+  outline: none;
+}
+
+.theme-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.theme-button:hover,
+.theme-button:focus {
+  background-color: var(--color-primary-dark);
+  outline: none;
+}
+

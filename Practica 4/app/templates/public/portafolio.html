@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('index') }}" class="menu-item">Inicio</a>
+    <a href="{{ url_for('sobre') }}" class="menu-item">Sobre mí</a>
+    <a href="{{ url_for('portafolio') }}" class="menu-item">Portafolio</a>
+    <a href="{{ url_for('blog') }}" class="menu-item">Blog</a>
+    <a href="{{ url_for('contacto') }}" class="menu-item">Contacto</a>
+    </nav>
+
+    <button class="theme-button" onclick="toggleDarkMode()">Modo Oscuro</button>
+
+    <div class="seccion">
+        <h1>Portafolio de Marin Salazar Juan Sebastian</h1>
+        <h2>Estos son trabajos que he hecho en el Tec</h2>
+        <p class="nota">Nota: La mayoría están hechos en consola o son básicos, no me juzguen porfi.</p>
+    </div>
+    
+    <div class="gallery">
+        <div>
+            <h4>Cramer y Gauss</h4>
+            <p>Proyecto de la U3 de Álgebra Lineal.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (16).png') }}" alt="Matriz a resolver">
+            <p><a href="https://drive.google.com/drive/folders/1hlZ8qhsJiAlpNUEw9VXd-_Ze1XTxvVAJ" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Calculadora Compleja</h4>
+            <p>Calculadora hecha en consola.</p>
+            <img src="{{ url_for('static', filename='img/Z_CalcuCompleja.png') }}" alt="Calculadora Compleja">
+            <p><a href="https://drive.google.com/drive/folders/1QFGbCVm-jd_0Bx-tfgqc8wtkletnQBkP" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Proyecto U4</h4>
+            <p>Proyecto para exentar la unidad 4.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (21).png') }}" alt="Proyecto U4">
+            <p><a href="https://drive.google.com/drive/folders/12pHVgCqXTDLIBCokyC9m2DSyGZ_I9dZI" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Transformación Lineal U5</h4>
+            <p>Facilita las transformaciones lineales.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (20).png') }}" alt="Transformación Lineal">
+            <p><a href="https://drive.google.com/drive/folders/1sO5zhd9XONLdME3jWkZRObr0vhIjQu0T" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Cronómetro Básico</h4>
+            <p>Ejemplo con hilos en Java.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (25).png') }}" alt="Cronómetro">
+            <p><a href="https://drive.google.com/drive/folders/19VLcbtHQ-JNl0SY9iLJkHSjAy_Itdl1q" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Mostrar número al presionar botón</h4>
+            <p>Prueba de interfaces en Java.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (26).png') }}" alt="Botón interactivo">
+            <p><a href="https://drive.google.com/drive/folders/1f3VFF52kBEJ28ROLZSXGTbCUOvJPcD_0?usp=drive_link" target="_blank">Consulta más aquí</a></p>
+        </div>
+        <div>
+            <h4>Proyecto del Juego</h4>
+            <p>Mi proyecto de desarrollo de videojuegos.</p>
+            <img src="{{ url_for('static', filename='img/2025-02-14 (22).png') }}" alt="Proyecto del Juego">
+            <p><a href="https://drive.google.com/drive/folders/1abcDEFgHIJKLMN" target="_blank">Consulta más aquí</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

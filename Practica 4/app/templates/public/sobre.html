@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav>
+    <a href="{{ url_for('index') }}" class="menu-item">Inicio</a>
+    <a href="{{ url_for('sobre') }}" class="menu-item">Sobre mí</a>
+    <a href="{{ url_for('portafolio') }}" class="menu-item">Portafolio</a>
+    <a href="{{ url_for('blog') }}" class="menu-item">Blog</a>
+    <a href="{{ url_for('contacto') }}" class="menu-item">Contacto</a>
+    </nav>
+
+    <button class="theme-button" onclick="toggleTheme()">Cambiar Tema</button>
+
+    <div class="container">
+        <h2>Datos Personales</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <td>Marin Salazar Juan Sebastian</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>20 años</td>
+            </tr>
+            <tr>
+                <th>Ciudad</th>
+                <td>Mexicali</td>
+            </tr>
+            <tr>
+                <th>Ocupación</th>
+                <td>Estudiante de Ingeniería en Sistemas Computacionales</td>
+            </tr>
+            <tr>
+                <th>Institución</th>
+                <td>Instituto Tecnológico de Mexicali</td>
+            </tr>
+        </table>
+
+        <h2>Estudios Generales</h2>
+        <ul>
+            <li>Escuela Primaria: Sor Juana Inés de la Cruz </li>
+            <li>Secundaria: Secundaria General #22 “Benito Juárez”</li>
+            <li>Preparatoria: CETis No. 75</li>
+            <li>Universidad: Instituto Tecnológico de Mexicali (En curso)</li>
+        </ul>
+
+        <h2>Mis Pasatiempos</h2>
+        <ul>
+            <li>Jugar videojuegos</li>
+            <li>Programar</li>
+            <li>Escuchar musica</li>
+            <li>Ver anime</li>
+            <li>Leer</li>
+            <li>Dibujar</li>
+            <li>Cocinar</li>
+        </ul>
+
+        <h2>Intereses</h2>
+        <p>Me gusta la tecnología, la programación y el diseño web. 
+            En mi tiempo libre disfruto de los videojuegos, la música, de vez en cuando dibujo y la cocina. 
+            Me gusta el color naranja, me gusta el verano (Por que me da nostalgia y felicidad), 
+            mis comidas favoritas son: Pozole, Hamburguesa y Alitas; Me gustan los animales, 
+            sobre todo los animales marinos y los gatos; Escucho todo tipo de musica (Literal), 
+            me gusta la playa, soy chistoso, estoy aprendiendo a tocar la bateria 
+            (quiero aprender mas instrumentos pero de poco en poco los aprendere) y soy muy nostalgico jeje.
+        </p>
+    </div>
+
+    <footer>
+        <p>Sígueme en:</p>
+        <a href="https://www.facebook.com/RivenConChanclas/" target="_blank">Facebook</a> | 
+        <a href="https://x.com/Zero_Tree" target="_blank">Twitter</a> | 
+        <a href="https://www.instagram.com/1zero_tree1/" target="_blank">Instagram</a>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+
+</html>
